@@ -1,0 +1,107 @@
+%
+% 2010.01.24 情報システム工学科対応
+% 2018.01.05 電子・情報工学科対応
+%
+\documentclass[10pt]{tpu-abst-utf}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+\lstset{
+basicstyle={\small},% 
+identifierstyle={\small},% 
+commentstyle={\small\ttfamily \color[rgb]{0,0,0}},% 
+keywordstyle={\small\bfseries \color[rgb]{0,0,1}},% 
+ndkeywordstyle={\small},% 
+stringstyle={\small\ttfamily}, 
+frame={tb}, 
+breaklines=true, 
+columns=[l]{fullflexible},% 
+numbers=left,% 
+xrightmargin=0zw,% 
+xleftmargin=3zw,% 
+numberstyle={\scriptsize},% 
+stepnumber=1, 
+numbersep=1zw,% 
+morecomment=[l]{//}% 
+}
+%
+% ここでタイトルの設定をします
+%
+% 自分の名前
+\author{佐原 優衣}
+%
+% 学籍番号
+\gakuban{1515024}
+%
+% 研究室の番号
+\kouzanum{2}
+% 1 情報基盤工学講座 
+% 2 情報システム工学講座 
+% 3 集積機能デバイス工学講座 
+% 4 電子通信システム工学講座 
+%
+%
+% 指導教員名: 
+% \kouzaname{ななし} % これはコメントアウトする
+% \kouzaname{太田} % 
+% \kouzaname{奥原} % 
+% \kouzaname{西田} % 
+% \kouzaname{榊原} % 
+\kouzaname{中村(正)} % 
+% \kouzaname{松本(三)} % 
+% \kouzaname{唐山} % 
+% \kouzaname{鳥山} % 
+% \kouzaname{岩本} % 
+% \kouzaname{安宅} % 
+% \kouzaname{中田} % 
+% \kouzaname{浦島} % 
+% \kouzaname{松田(敏)} % 
+% \kouzaname{岩田} % 
+% \kouzaname{松田(弘)} % 
+% \kouzaname{石坂} % 
+% \kouzaname{三宅} % 
+% \kouzaname{小林(香)} % 
+% \kouzaname{小島} % 
+%
+% 発表番号
+\happyou{18}
+%
+% タイトル
+\title{UPPAALを用いた自動運転車の\\群制御アルゴリズムのモデル化と検証}
+%
+%----- begin document
+%
+\begin{document}
+%
+\maketitle
+%
+%----- your abstract， please
+%
+\section{研究背景と目的}
+%
+自動運転技術は発達し続けている。自動運転は，搭載される技術によってレベル1からレベル5までに分けられており，現在，日本国内では，運転者支援を主としたレベル2までが市販車に採用されている。今後，高速道路や，限定地域での特定条件下での完全自動運転を行うレベル4の車両の普及が目指されている。
+	
+一例として，アラブ首長国連邦において再生可能エネルギーを利用し，二酸化炭素を排出しないゼロカーボンを目指すマスダールシティプロジェクトが存在する。このプロジェクトでは道路交通は自動運転車のみで構成される予定である。住民が任意の時刻に自動運転車に乗降し都市空間内を移動することを想定しているため，大量の車両の配備が必要となる。道路上の車両密度が高くなるため，渋滞やデッドロックが発生することが想定される。したがって，個々の車両だけではなく，自動運転車群が効率的に走行するアルゴリズムが必要となる。
+	
+しかし，効率的なアルゴリズムが本当に問題がないかどうか確証がない。そこで本研究では群制御アルゴリズムが欲しい性質を持っているかどうかを検証する手法を提案する。
+%
+\section{モデル検査}
+モデル検査は，システム上で起こり得る状態を網羅的に調べることにより設計の誤りを発見する自動検証手法の一種である。モデル検査手法は，図\ref{ModelV}に示す様に，システムの振る舞いの設計，および検証したい性質をそれぞれモデル化し，ツールを用いて，システムが性質を満たしているかを調べる。
+	\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=90mm]{ModelVerification.png}
+	\caption{モデル検査とは}
+	\label{ModelV}
+	\end{figure}
+\section{UPPAALを用いたモデル化と検証}
+4台の車両が出発地点から到着地点まで，それぞれ違う方向から一つの交差点に進入し，通過するとする。なお，この交差点には右折レーン，信号がないものとする。平行な向きの車両はお互いに止まることなく通過するが，進行方向が垂直に交差する場合は先に交差点への進入権を獲得した方が先に通過する。そのために交差点への進入権をいつ獲得し，交差点の通過にかかる時間も考慮する。
+
+本例題においてすべての車両は交差点進入前，交差点通過中，通過後の3つの状態に分けられる。すなわち進行方向以外は挙動が一致するのでテンプレートという概念で車両プロセスの挙動を定義する。
+\section{まとめ}
+
+
+
+\begin{thebibliography}{1}
+\bibitem{no1}{\small 長谷川哲夫，田原康之，磯部祥尚，UPPAALによる性能モデル検証ーリアルタイムシステムのモデル化と検証ー，（株）近代科学社，2012}
+\end{thebibliography}
+%
+\end{document}
