@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.10.18)  7 FEB 2019 20:08
+This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.10.18)  7 FEB 2019 21:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -122,12 +122,7 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 79.
 File: ModelVerification.png Graphic file (type bmp)
 <ModelVerification.png>
-
-Overfull \hbox (23.84854pt too wide) in paragraph at lines 91--92
- [][] 
- []
-
-[1
+ [1
 
 
 ] (./graguAbst.aux) ) 
@@ -138,6 +133,6 @@ Here is how much of TeX's memory you used:
  6028 multiletter control sequences out of 15000+600000
  13396 words of font info for 52 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 28i,4n,32p,510b,276s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,4n,32p,377b,276s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on graguAbst.dvi (1 page, 5516 bytes).
+Output written on graguAbst.dvi (1 page, 4432 bytes).
