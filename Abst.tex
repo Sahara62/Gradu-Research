@@ -1,9 +1,6 @@
-%
-% 2010.01.24 情報システム工学科対応
-% 2018.01.05 電子・情報工学科対応
-%
-\documentclass[10pt]{tpu-abst-utf}
+\documentclass[twocolumn,10pt]{jsarticle}
 \usepackage[dvipdfmx]{graphicx}
+\usepackage[top=19truemm,bottom=18truemm,left=14.5truemm,right=14.5truemm]{geometry}
 \usepackage{listings}
 \lstset{
 basicstyle={\small},% 
@@ -23,73 +20,61 @@ stepnumber=1,
 numbersep=1zw,% 
 morecomment=[l]{//}% 
 }
+\makeatletter
+ \def\@maketitle{%
+   \newpage\null
+   \begin{center}%
+     \let\footnote\thanks
+     {\LARGE \@title \par}%
+     \vskip 1.0em
+     {\large
+       \lineskip .5em
+       \begin{tabular}[t]{c}%
+         \@author
+       \end{tabular}\par}%
+     \vskip 1em
+     {\large \@date}%
+   \end{center}%
+   \par\vskip 0.5em
+   \ifvoid\@abstractbox\else\centerline{\box\@abstractbox}\vskip1.5em\fi
+ }
+\makeatother
+\makeatletter
+ % sectionの下マージンを小さく
+ \renewcommand{\section}{%
+   \@startsection{section}{1}{\z@}%
+   {0.4\Cvs}{0.1\Cvs}%
+   {\normalfont\large\headfont\raggedright}}
+\makeatother
+\setlength\intextsep{10pt}
 %
 % ここでタイトルの設定をします
 %
 % 自分の名前
-\author{佐原 優衣}
-%
-% 学籍番号
-\gakuban{1515024}
-%
-% 研究室の番号
-\kouzanum{2}
-% 1 情報基盤工学講座 
-% 2 情報システム工学講座 
-% 3 集積機能デバイス工学講座 
-% 4 電子通信システム工学講座 
-%
-%
-% 指導教員名: 
-% \kouzaname{ななし} % これはコメントアウトする
-% \kouzaname{太田} % 
-% \kouzaname{奥原} % 
-% \kouzaname{西田} % 
-% \kouzaname{榊原} % 
-\kouzaname{中村} % 
-% \kouzaname{松本(三)} % 
-% \kouzaname{唐山} % 
-% \kouzaname{鳥山} % 
-% \kouzaname{岩本} % 
-% \kouzaname{安宅} % 
-% \kouzaname{中田} % 
-% \kouzaname{浦島} % 
-% \kouzaname{松田(敏)} % 
-% \kouzaname{岩田} % 
-% \kouzaname{松田(弘)} % 
-% \kouzaname{石坂} % 
-% \kouzaname{三宅} % 
-% \kouzaname{小林(香)} % 
-% \kouzaname{小島} % 
-%
-% 発表番号
-\happyou{18}
-%
+\author{佐原 優衣	　榊原 一紀	　中村 正樹	　	　富山県立大学}
+\date{}
 % タイトル
 \title{UPPAALを用いた自動運転車の\\群制御アルゴリズムのモデル化と検証}
 %
 %----- begin document
 %
 \begin{document}
-%
 \maketitle
-%
-%----- your abstract， please
-%
+\thispagestyle{empty}
 \section{研究背景と目的}
 %1--
 近年，自動運転技術は発達し続けている。道路交通が自動運転車のみで構成される都市空間を考える。多数の自動運転車が発生する都市空間では，道路上の車両密度が高くなるため，様々な問題が発生する可能性がある。したがって自動運転車群に対する効率的な群制御アルゴリズムが必要となる。本研究では，自動運転車で構成された都市空間における群制御アルゴリズムをモデル化し，その性質をモデル検査技術によって形式的に検証する手法を提案する。
 
 モデル検査は，システム上で起こり得る状態を網羅的に調べることにより設計の誤りを発見する自動検証手法の一種である。モデル検査手法は，図\ref{ModelV}に示すように，システムの振る舞いの設計，および検証したい性質をそれぞれモデル化し，ツールを用いて，システムが性質を満たしているかを調べる。本研究では，時間オートマトンによる時間制約検証が行えるモデル検査ツールUPPAAL\cite{no1}を採用する。
-	\begin{figure}[htb]
+	\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=70mm]{ModelVerification.png}
-	\caption[9pt]{モデル検査による形式的な検証}
+	\includegraphics[width=65mm]{ModelVerification.png}
+	\caption{モデル検査とは}
 	\label{ModelV}
 	\end{figure}
-%2--
 
 UPPAALはGUIベースのモデリング環境を提供している。このため，作成したシステムモデルが直感的に把握しやすい。入力したシステムモデルに対して，GUIベースでシミュレーション実行とモデル検査による自動検証が可能である。シミュレーション画面では，各プロセスの現在状態と変数の値，状態遷移図とメッセージシーケンスが表示される。
+%2--
 \section{UPPAALを用いたモデル化と検証}
 UPPAALを用いて交差点を通過する1台の車両の時間オートマトンを作成する(図\ref{Simple})。車両は交差点進入前，交差点通過中，通過後の3つの状態に分けられる。交差点進入時に使用権を獲得し，通過中状態から通過後状態に遷移時に使用権を解放する。状態遷移可能条件を時間とすることによって，通過にかかる時間や何秒前に使用権を獲得しなければならないかを検証できる。
 \begin{figure}[htbp]
@@ -107,7 +92,7 @@ UPPAALを用いて交差点を通過する1台の車両の時間オートマト�
 \section{まとめ}
 本研究では，UPPAALを用いた自動運転車群制御アルゴリズムのモデル化と検証の手法を提案した。単一の交差点においては車両の挙動をモデル化し，デッドロックや通過時間を検証することができた。複数の交差点から構成される都市空間のモデルを作成し検証することが今後の課題である。
 \begin{thebibliography}{1}
-\bibitem{no1}{\small 長谷川哲夫,田原康之,磯部祥尚, UPPAALによる性能モデル検証ーリアルタイムシステムのモデル化と検証ー, 近代科学社,2012.}
+\bibitem{no1}{\small 長谷川哲夫,田原康之,磯部祥尚, UPPAALによる性能モデル検証ーリアルタイムシステムのモデル化と検証ー, 近代科学社, 2012.}
 \end{thebibliography}
 %
 \end{document}

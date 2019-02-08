@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.10.18)  8 FEB 2019 00:51
+This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.10.18)  8 FEB 2019 12:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -131,10 +131,10 @@ File: Simple.png Graphic file (type bmp)
 Here is how much of TeX's memory you used:
  2041 strings out of 493248
  27603 string characters out of 6144401
- 97815 words of memory out of 5000000
+ 96812 words of memory out of 5000000
  6031 multiletter control sequences out of 15000+600000
  13396 words of font info for 52 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 28i,4n,32p,377b,276s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,4n,32p,430b,274s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on graguAbst.dvi (1 page, 6904 bytes).
+Output written on graguAbst.dvi (1 page, 6924 bytes).

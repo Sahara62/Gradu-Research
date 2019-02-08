@@ -1,0 +1,28 @@
+\BOOKMARK [1][-]{section.1}{Preface to version 5}{}% 1
+\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.3}{Page geometry}{}% 3
+\BOOKMARK [1][-]{section.4}{User interface}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Commands}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Optional argument}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Option types}{section.4}% 7
+\BOOKMARK [1][-]{section.5}{Option details}{}% 8
+\BOOKMARK [2][-]{subsection.5.1}{Paper size}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.2}{Layout size}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.3}{Body size}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.4}{Margin size}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.5}{Native dimensions}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.6}{Drivers}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.7}{Other options}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{Processing options}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Order of loading}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.2}{Order of options}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.3}{Priority}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.4}{Defaults}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.5}{Auto-completion}{section.6}% 21
+\BOOKMARK [1][-]{section.7}{Changing layout mid-document}{}% 22
+\BOOKMARK [1][-]{section.8}{Examples}{}% 23
+\BOOKMARK [1][-]{section.9}{Known problems}{}% 24
+\BOOKMARK [1][-]{section.10}{Acknowledgments}{}% 25
+\BOOKMARK [1][-]{section.11}{Implementation}{}% 26
+\BOOKMARK [1][-]{section.12}{Config file}{}% 27
+\BOOKMARK [1][-]{section.13}{Sample file}{}% 28
